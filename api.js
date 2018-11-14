@@ -4,7 +4,7 @@ async function getUser(accessToken) {
 	const requestOptions = {
 		uri: 'https://api-proxy.pipedrive.com/users/me',
 		headers: {
-		'Authorization': `Bearer ${accessToken}`
+			'Authorization': `Bearer ${accessToken}`
 		},
 		json: true
 	};
