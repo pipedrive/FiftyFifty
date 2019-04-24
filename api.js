@@ -15,12 +15,12 @@ async function getUser(accessToken) {
 
 async function getDeals(accessToken) {
 	const requestOptions = {
-        uri: 'https://api-proxy.pipedrive.com/deals',
-        headers: {
-            'Authorization': `Bearer ${accessToken}`
-        },
-        qs: { status: 'open' },
-        json: true
+		uri: 'https://api-proxy.pipedrive.com/deals',
+		headers: {
+			'Authorization': `Bearer ${accessToken}`
+		},
+		qs: { status: 'open' },
+		json: true
 	};
 	const deals = await request(requestOptions);
 
@@ -29,16 +29,16 @@ async function getDeals(accessToken) {
 
 async function updateDeal(id, outcome, accessToken) {
 	const requestOptions = {
-        uri: `https://api-proxy.pipedrive.com/deals/${id}`,
-        method: 'PUT',
-        headers: {
-            'Authorization': `Bearer ${accessToken}`
-        },
-        json: {
-            status: outcome
-        }
+		uri: `https://api-proxy.pipedrive.com/deals/${id}`,
+		method: 'PUT',
+		headers: {
+			'Authorization': `Bearer ${accessToken}`
+		},
+		json: {
+			status: outcome
+		}
 	};
-	
+
 	await request(requestOptions);
 }
 
@@ -46,4 +46,4 @@ module.exports = {
 	getUser,
 	getDeals,
 	updateDeal
-}
+};
