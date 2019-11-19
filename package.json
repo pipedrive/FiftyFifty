@@ -17,12 +17,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "hbs": "^4.0.4",
-    "knex": "^0.15.2",
+    "hbs": "^4.0.6",
+    "knex": "^0.20.2",
     "passport": "^0.4.0",
     "passport-oauth": "^1.0.0",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4",
+    "request-promise": "^4.2.5",
     "sqlite3": "^4.0.4"
   }
 }
