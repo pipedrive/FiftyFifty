@@ -23,6 +23,6 @@
     "passport-oauth": "^1.0.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
-    "sqlite3": "^4.0.4"
+    "sqlite3": "^4.1.0"
   }
 }
