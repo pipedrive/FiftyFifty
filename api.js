@@ -2,7 +2,7 @@ const request = require('request-promise');
 
 async function getUser(accessToken) {
 	const requestOptions = {
-		uri: 'https://api-proxy.pipedrive.com/users/me',
+		uri: 'https://api.pipedrive.com/v1/users/me',
 		headers: {
 			'Authorization': `Bearer ${accessToken}`
 		},
@@ -15,7 +15,7 @@ async function getUser(accessToken) {
 
 async function getDeals(accessToken) {
 	const requestOptions = {
-		uri: 'https://api-proxy.pipedrive.com/deals',
+		uri: 'https://api.pipedrive.com/v1/deals',
 		headers: {
 			'Authorization': `Bearer ${accessToken}`
 		},
@@ -29,7 +29,7 @@ async function getDeals(accessToken) {
 
 async function updateDeal(id, outcome, accessToken) {
 	const requestOptions = {
-		uri: `https://api-proxy.pipedrive.com/deals/${id}`,
+		uri: `https://api.pipedrive.com/v1/deals/${id}`,
 		method: 'PUT',
 		headers: {
 			'Authorization': `Bearer ${accessToken}`
