@@ -1,6 +1,7 @@
 {
   "name": "FiftyFifty",
   "description": "Example app for Pipedrive Marketplace",
-  "owner": "GRAVITY",
-  "type": "application"
+  "owner": "Gravity",
+  "type": "application",
+  "status": "released"
 }
