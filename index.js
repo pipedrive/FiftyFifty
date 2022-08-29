@@ -33,6 +33,7 @@ passport.use(
 	)
 );
 
+app.disable('x-powered-by');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
@@ -62,7 +63,9 @@ app.get('/', async (req, res) => {
 			deals: deals.data
 		});
 	} catch (error) {
-		return res.send(error.message);
+		console.log(error);
+
+		return res.send('Failed to get deals');
 	}
 });
 app.get('/deals/:id', async (req, res) => {
@@ -74,7 +77,9 @@ app.get('/deals/:id', async (req, res) => {
 
 		res.render('outcome', { outcome });
 	} catch (error) {
-		return res.send(error.message);
+		console.log(error);
+
+		return res.send('Failed to update the deal');
 	}
 });
 
