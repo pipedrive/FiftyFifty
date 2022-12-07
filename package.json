@@ -16,7 +16,7 @@
   "author": "Siim Kibus",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "hbs": "^4.2.0",
     "knex": "^2.2.0",
     "passport": "^0.6.0",
