@@ -1,45 +1,46 @@
-const request = require('request-promise');
+const axios = require('axios');
 
 async function getUser(accessToken) {
 	const requestOptions = {
-		uri: 'https://api.pipedrive.com/v1/users/me',
+		url: 'https://api.pipedrive.com/v1/users/me',
 		headers: {
 			'Authorization': `Bearer ${accessToken}`
 		},
-		json: true
+		timeout: 10000
 	};
-	const userInfo = await request(requestOptions);
 
-	return userInfo;
+	const userInfo = await axios(requestOptions);
+
+	return userInfo.data;
 }
 
 async function getDeals(accessToken) {
 	const requestOptions = {
-		uri: 'https://api.pipedrive.com/v1/deals',
+		url: 'https://api.pipedrive.com/v1/deals?status=open',
 		headers: {
 			'Authorization': `Bearer ${accessToken}`
 		},
-		qs: { status: 'open' },
-		json: true
+		timeout: 10000
 	};
-	const deals = await request(requestOptions);
+	const deals = await axios(requestOptions);
 
-	return deals;
+	return deals.data;
 }
 
 async function updateDeal(id, outcome, accessToken) {
 	const requestOptions = {
-		uri: `https://api.pipedrive.com/v1/deals/${id}`,
+		url: `https://api.pipedrive.com/v1/deals/${id}`,
 		method: 'PUT',
 		headers: {
 			'Authorization': `Bearer ${accessToken}`
 		},
-		json: {
+		data: {
 			status: outcome
-		}
+		},
+		timeout: 10000
 	};
 
-	await request(requestOptions);
+	await axios(requestOptions);
 }
 
 module.exports = {
