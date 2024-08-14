@@ -1,1 +1,1 @@
-The repository is deprecated and FiftyFifty has been moved to [pipedrive/example-apps/pipedrive-hello-world-glitch](https://github.com/pipedrive/example-apps/pipedrive-hello-world-glitch)
+The repository is deprecated and FiftyFifty has been moved to [pipedrive/example-apps/pipedrive-hello-world-glitch](https://github.com/pipedrive/example-apps/tree/master/apps/pipedrive-hello-world-glitch)
